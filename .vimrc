@@ -56,11 +56,18 @@ nnoremap <S-x> <C-x>
 "tabbed vim shortcuts, similar to screen
 
 function! CleanXML()
+"remove xmlns declarations
+    1,s/ xmlns:\w\+="[^"]*"//g
+
+"fix survey tag on each line
+    1,s/<survey /<survey  /g
+    1,s/" /" /g
+
 "remove id=""
     %s/ id="[^"]*"//g
 
-"remove xml namespace declaration
-    %s/ xmlns:\w\+="[^"]*"//g
+"add break after suspends
+    %s/<suspend\/>/<suspend\/>/g
 endfunction
 
 function! Tabber(tab)

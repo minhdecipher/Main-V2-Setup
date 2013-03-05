@@ -1,0 +1,2 @@
+csv-0.23.vmb: call delete('/home/minh/.vim/ftplugin/csv.vim	[[[1')|call delete('/home/minh/.vim/doc/ft-csv.txt	[[[1')|call delete('/home/minh/.vim/syntax/csv.vim	[[[1')|call delete('/home/minh/.vim/ftdetect/csv.vim	[[[1')|call delete('/home/minh/.vim/plugin/csv.vim	[[[1')
+csv-0.23.vmb: call delete('/home/minh/.vim/ftplugin/csv.vim	[[[1')|call delete('/home/minh/.vim/doc/ft-csv.txt	[[[1')|call delete('/home/minh/.vim/syntax/csv.vim	[[[1')|call delete('/home/minh/.vim/ftdetect/csv.vim	[[[1')|call delete('/home/minh/.vim/plugin/csv.vim	[[[1')

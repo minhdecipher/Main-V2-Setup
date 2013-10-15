@@ -33,7 +33,7 @@ alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias l='ls -la'
 alias la='ls -al'
-alias rm='rm -r'
+alias rm='rm -i'
 
 #v2 alias shortcuts
 alias v2='cd /home/jaminb/v2/'

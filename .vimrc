@@ -1,11 +1,11 @@
+let g:mapleader = ","
+filetype plugin on
 
 "ignore case when searching
 set ignorecase
 
 set incsearch
 set hlsearch
-
-filetype plugin on
 
 "allow mouse to move cursor around
 set ttymouse=xterm2
@@ -17,8 +17,8 @@ set ww+=<,>h,l
 "show filename in title bar
 set title
 
-"Better pasting with paste mode
-set paste
+"Better pasting with paste mode, breaks snipMate
+"set paste
 
 "Highlight current cursor line
 "set cursorline
@@ -38,8 +38,9 @@ set <F2>=[12~
 set <F3>=[13~
 set <F4>=[14~
 
-nmap <F2> :call CleanXML()<CR>
-nmap <F3> :set number! number?<CR>
+nmap <F1> :call CleanXML()<CR>
+nmap <F2> :call RemoveID()<CR>
+set pastetoggle=<F3>
 nmap <F4> :set wrap! wrap?<cr>
 nmap <F5> :call Tabber(0)<cr>
 nmap <F6> :call Tabber(1)<cr>
@@ -49,11 +50,18 @@ nmap <F9> :set syntax=javascript<cr>
 nmap <F10> :set syntax=python<cr>
 nmap <F11> :set syntax=csv<cr>
 nmap <F12> :set syntax=html<cr>
+nmap <C-n> :tabnext<cr>
+nmap <C-p> :tabprev<cr>
 
 "fixes screen conflict (<C-a>)
 nnoremap <S-a> <C-a>
 nnoremap <S-x> <C-x>
 "tabbed vim shortcuts, similar to screen
+
+function! RemoveID()
+"remove id=""
+    %s/ id="\w\{5\}">/>/g
+endfunction
 
 function! CleanXML()
 "remove xmlns declarations
@@ -63,11 +71,8 @@ function! CleanXML()
     1,s/<survey /<survey  /g
     1,s/" /" /g
 
-"remove id=""
-    %s/ id="[^"]*"//g
-
 "add break after suspends
-    %s/<suspend\/>/<suspend\/>/g
+    %s/<suspend id="[^"]*"\/>/<suspend\/>/g
 endfunction
 
 function! Tabber(tab)

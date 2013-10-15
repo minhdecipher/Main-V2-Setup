@@ -43,25 +43,15 @@ alias sl="screen -ls"
 alias sr="screen -dR"
 alias sx="screen -x"
 alias ftpdir='cd /home/httpd/html/misc/int/upload'
-alias ebayshared='cd /home/jaminb/www/misc/shared/ebay'
 alias nsst='tsst -qvN .'
-alias get-xml='/home/jaminb/v2/temp/minh/scripts/get-xml/get-xml "$@"'
-alias builder-clean='/home/jaminb/v2/temp/minh/scripts/builder-clean/builder-clean "$@"'
-alias condition-clean='/home/jaminb/v2/temp/minh/scripts/condition-clean/condition-clean "$@"'
-alias fixtags='/home/jaminb/v2/temp/minh/scripts/builder-clean/fixtags.sh "$@"'
 alias sendbyperc='/home/jaminb/v2/temp/minh/scripts/sendbyperc/sendbyperc.py "$@"'
 alias sampleSourcesBuilder='/home/jaminb/v2/temp/minh/scripts/sampleSourcesBuilder/sampleSourcesBuilder.py'
-#alias gcat='/home/jaminb/v2/temp/gwicks/scr/gcat "$@"'
 alias pypender='/home/jaminb/v2/temp/minh/scripts/pypender/pypender.py "$@"'
 alias bulk-minh='bulk -F -lemail:minh@decipherinc.com'
 alias getfreq='/home/jaminb/v2/temp/minh/scripts/getfreq/getfreq.py "$@"'
 alias checkOpens='/home/jaminb/v2/temp/minh/scripts/checkOpens/checkOpens.sh "$@"'
 alias parseLog='/home/jaminb/v2/temp/minh/scripts/parseLog/parseLog.py "$@"'
 alias languagesBuilder='/home/jaminb/v2/temp/roshan/SCRIPTS/LanguageTag/language.py'
-alias gmi='ssh minh@gemini.decipherinc.com'
-alias yougov='ssh minh@morrigan.decipherinc.com'
-alias xcell='python /home/jaminb/v2/temp/cameron/scripts/xcell/xcell.py "$@"'
-alias xlshell='python /home/jaminb/v2/temp/thomas/scripts/XLShell/XLShell.py "$@"'
 
 function mksurvey() { 
     mkdir $1 && cd $1 && cp ~/survey.xml . && here setfolder .; 

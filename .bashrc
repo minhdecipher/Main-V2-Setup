@@ -33,25 +33,33 @@ alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias l='ls -la'
 alias la='ls -al'
-alias p='vim'
-alias vim='vim -pb'
+
+#v2 alias shortcuts
 alias v2='cd /home/jaminb/v2/'
 alias v2dev='cd /home/jaminb/alpha/v2-dev/'
-alias m='echo "Your file is attached" | mailimp -s "See Attached File" -F'
-#list screens open
-alias sl="screen -ls"
-alias sr="screen -dR"
-alias sx="screen -x"
 alias ftpdir='cd /home/httpd/html/misc/int/upload'
 alias nsst='tsst -qvN .'
+alias bulk-minh='bulk -F -lemail:minh@decipherinc.com'
+
+#mail some files quicker
+alias m='echo "Your file is attached" | mailimp -s "See Attached File" -F'
+
+#user scripts
 alias sendbyperc='/home/jaminb/v2/temp/minh/scripts/sendbyperc/sendbyperc.py "$@"'
 alias sampleSourcesBuilder='/home/jaminb/v2/temp/minh/scripts/sampleSourcesBuilder/sampleSourcesBuilder.py'
 alias pypender='/home/jaminb/v2/temp/minh/scripts/pypender/pypender.py "$@"'
-alias bulk-minh='bulk -F -lemail:minh@decipherinc.com'
 alias getfreq='/home/jaminb/v2/temp/minh/scripts/getfreq/getfreq.py "$@"'
 alias checkOpens='/home/jaminb/v2/temp/minh/scripts/checkOpens/checkOpens.sh "$@"'
 alias parseLog='/home/jaminb/v2/temp/minh/scripts/parseLog/parseLog.py "$@"'
 alias languagesBuilder='/home/jaminb/v2/temp/roshan/SCRIPTS/LanguageTag/language.py'
+
+#vim alias shortcuts
+alias p='vim'
+alias vim='vim -pb'
+
+#screen alias shortcuts
+alias sl="screen -ls"
+alias sr="screen -dR"
 
 function mksurvey() { 
     mkdir $1 && cd $1 && cp ~/survey.xml . && here setfolder .; 

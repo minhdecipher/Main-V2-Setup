@@ -30,6 +30,7 @@ esac
 export GREP_COLOR='1;37;41'
 alias grep='grep --color=auto'
 
+alias ls='ls --color=auto'
 alias l='ls -la'
 alias la='ls -al'
 alias p='vim'
@@ -59,7 +60,13 @@ alias parseLog='/home/jaminb/v2/temp/minh/scripts/parseLog/parseLog.py "$@"'
 alias languagesBuilder='/home/jaminb/v2/temp/roshan/SCRIPTS/LanguageTag/language.py'
 alias gmi='ssh minh@gemini.decipherinc.com'
 alias yougov='ssh minh@morrigan.decipherinc.com'
+alias xcell='python /home/jaminb/v2/temp/cameron/scripts/xcell/xcell.py "$@"'
+alias xlshell='python /home/jaminb/v2/temp/thomas/scripts/XLShell/XLShell.py "$@"'
+
+function mksurvey() { 
+    mkdir $1 && cd $1 && cp ~/survey.xml . && here setfolder .; 
+}
 
 CDPATH=.:~jaminb/v2
-cd /home/jaminb/v2/
+cd /home/jaminb/v2
 return
